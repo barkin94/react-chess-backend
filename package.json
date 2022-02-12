@@ -1,0 +1,19 @@
+{
+	"name": "chess-backend",
+	"version": "1.0.0",
+	"description": "",
+	"main": "",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "tsc && node ./dist/index.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"dotenv": "^10.0.0",
+		"socket.io": "^4.4.1"
+	},
+	"devDependencies": {
+		"typescript": "^4.4.2"
+	}
+}
