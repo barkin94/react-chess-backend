@@ -79,16 +79,7 @@ setInterval(async () => {
     p1Socket.data.currentRoom = room;
     p2Socket.data.currentRoom = room;
 
-    const startingPlayer = getStartingPlayer();
-    p1Socket.emit("matchFound", {
-      color: "black",
-      isStartingFirst: startingPlayer === "p1",
-    });
-    p2Socket.emit("matchFound", {
-      color: "white",
-      isStartingFirst: startingPlayer === "p2",
-    });
+    p1Socket.emit("matchFound", { color: "black" });
+    p2Socket.emit("matchFound", { color: "white" });
   }
 }, 3000);
-
-const getStartingPlayer = () => (Math.random() > 0.5 ? "p1" : "p2");
