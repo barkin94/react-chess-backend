@@ -16,6 +16,8 @@ const server = new Server({
     : undefined,
 });
 
-server.listen(3001);
+const port = parseInt(process.env.PORT || "3001");
+server.listen(port);
+console.log("listening on port: " + port);
 
 export default server;
