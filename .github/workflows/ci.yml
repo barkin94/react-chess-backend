@@ -7,12 +7,14 @@ on:
     tags: [ 'v*.*.*' ]
 
 env:
+  
   PROJECT_NAME: ${{ github.event.repository.name }}
   USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
   PASSWORD: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
 jobs:
   build:
+    environment: prod
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
